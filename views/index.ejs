@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet"  type="text/css" href="styles/style.css">
+ 
+    <title>Document</title>
+   
+</head>
+<body>
+   
+        
+        <div id="alertbox">
+            <h1>something blue</h1>
+        </div>
+        <ul>
+            
+            <% contents.forEach(function(item,k){ k=k+1;%>
+            <div class="questionbox">
+                <div class="container">
+                <h2><%=k%>.<%=item.question%></h2>
+                    <ul>
+                        
+                         <form method="POST" name="pitanje<%=k*10%>>" action="/users/add" id=<%=k*10%>>
+                            <% item.anwsers.forEach(function(item,i){i=i+1; %>
+                        
+                           
+                             <child>  <input type="checkbox" id="<%=k%><%=i%>" name="<%= "odgovor"+k+i%>" onclick="return KeepCount(<%=k%><%=i%>)"   ><a><%=item.text%></a><br></child>
+                            
+                         <%   }); %>
+                         
+                        </form>
+                    </ul>
+                </div>
+            </div>
+            <%  }); %>
+
+           
+        
+          </ul>
+
+        
+
+
+
+
+
+       
+        <input type="button" id="buttonone" value="Submit">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/front.js"></script>
+
+    
+
+    
+</body>
+</html>

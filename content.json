@@ -1,0 +1,18 @@
+{
+  "title":"blablalba",
+  "something":"ovo je novo",
+  "niz":[
+    {
+      "name":"VOLVO",
+      "type":"ALL4"
+    },
+    {
+      "name":"AUDI",
+      "type":"FRONT2"
+    },
+    {
+      "name":"BMW",
+      "type":"BACK2"
+    }
+  ]
+}
